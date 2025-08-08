@@ -1,4 +1,3 @@
-
 //Exercicio 1
 const sociedade:string[] = ['Frodo', 'Sam', 'Gandalf', 'Legolas', 'Gimli', 'Merry', 'Pippin', 'Aragorn', 'Boromir'];
 let hobbits:string[] = ["Frodo", "Sam", "Merry", "Pippin"];
