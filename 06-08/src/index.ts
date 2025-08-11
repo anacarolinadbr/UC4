@@ -78,3 +78,15 @@ do {
     console.log("Dando passos " + passos);
     } while (passos < passosParaMordor);
     console.log("Chegamos em Mordor! ")
+
+
+    /*const idade = 18;
+const habilitação = true;
+
+if (idade >= 18 && habilitação) {
+  console.log("Você pode dirigir");
+} else if(idade <= 18 && !habilitação) {
+    console.log("Você é de menor mas não tem carteira")
+} else {
+    console.log("Você é menor de idade.")
+}*/
