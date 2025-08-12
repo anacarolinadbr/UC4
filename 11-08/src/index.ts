@@ -59,7 +59,7 @@ case "4":
     break
 
     default:
-    console.log("Opção inválida!");
+    console.log("Opção inválida!!!");
     break;
      }
 }
