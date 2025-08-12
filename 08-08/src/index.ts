@@ -1,5 +1,5 @@
 // At 1
-const estaChovendo = true;
+const estaChovendo:boolean = true;
 if (estaChovendo) {
     console.log("Leve guarda-chuva")
 } else {
@@ -7,10 +7,12 @@ if (estaChovendo) {
 }
 
 //Ativ 2 
-const nota = 7;
+const nota:number = 7;
 const resultado = nota >= 6 ? "Aprovado" : "Reprovado";
 console.log(resultado)
-const animal = 'gato';
+
+//Ativ 3
+const animal:string = 'gato';
 
 switch (animal) {
   case "cachorro":
@@ -25,7 +27,7 @@ switch (animal) {
 
 // Ativ 4 
 import * as readline from 'readline-sync';
-let  jogando = true;
+let  jogando:boolean = true;
 
 while (jogando) {
 console.log("=== MENU PRINCIPAL ===");
