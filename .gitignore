@@ -4,8 +4,3 @@ node_modules/
 # Ignora a pasta dist
 dist/
 
-# Ignora arquivo 31-07
-31-07/
-
-# Ignora arquivo 04-08
-04-08/
