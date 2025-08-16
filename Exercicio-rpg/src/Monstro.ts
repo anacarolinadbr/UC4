@@ -11,8 +11,14 @@ export class Monstro{
         this.forca = forca
     }
 
-    atacar(vidaPersonagem:Personagem):void{
-        
+    dano(personagem:Personagem):void{
+        this.vida -= personagem.getForca()
+        console.log(`${this.nome} foi atingido pelo personagem, ele atacou com ${personagem.getForca()} de força, ${this.nome} tem agora ${this.vida} de vida`)
+    }
+
+    atacar(personagem:Personagem):void{
+        personagem.dano(this) 
+        console.log(`${this.nome} atingiu seu oponente com ${this.forca} de força, o personagem está com ${this.vida} de vida`)
     }
 
     getNome():string{
@@ -25,8 +31,14 @@ export class Monstro{
     getForca():number{
         return this.forca
     }
-    
-    
+
+    setForca(forca:number): void{
+        this.forca = forca
+    }
+
+    setVida(vida:number): void{
+        this.vida = vida
+    }
 }
 
 

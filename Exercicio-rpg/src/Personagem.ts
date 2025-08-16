@@ -13,20 +13,24 @@ export class Personagem {
         this.forca = forca
     }
 
-    atacar(vidaMonstro:Monstro):void{
-        this.forca = vidaMonstro.getVida()
-        console.log(`Você atingiu seu oponente com ${this.getForca} de força`)
+    atacar(monstro:Monstro):void{
+        monstro.dano(this) 
+        console.log(`${this.nome} atingiu seu oponente com ${this.forca} de força, o monstro está com ${this.vida} de vida`)
     }
 
-    dano(vida:number):void{
-        this.vida = this.getVida()
-
+    dano(monstro:Monstro):void{
+        this.vida -= monstro.getForca()
+        console.log(`${this.nome} foi atingido pelo monstro, ele atacou você com ${monstro.getForca()} de força, você tem agora ${this.vida} de vida`)
     }
 
-    curar(valor:number):void{
-        
+    curar(curar:number):void{
+        if(this.vida + curar < 10) {
+            this.setVida(this.vida + curar)
+            console.log(`Você se curou, agora tem ${this.vida} de vida`)
+        } else {
+            console.log("Não pode ultrapassar sua vida máxima")
+        }
     }
-
 
     getNome():string{
         return this.nome
@@ -39,9 +43,19 @@ export class Personagem {
     getVida():number{
         return this.vida
     }
+
     getForca():number{
         return this.forca
     }
 
+    setForca(forca:number): void{
+        this.forca = forca
+    }
+
+    setVida(vida:number): void{
+        this.vida = vida
+    }
 }
+
+
 
