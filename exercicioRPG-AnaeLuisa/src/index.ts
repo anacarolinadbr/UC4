@@ -1,6 +1,5 @@
 import { Monstro } from "./Monstro"
 import { Personagem } from "./Personagem"
-
 const personagem: Personagem = new Personagem("Amabel", "guerreiro", 10, 3)
 const monstro: Monstro = new Monstro("Kraken", 10, 5)
 
@@ -18,7 +17,6 @@ console.log("")
 
 // Amabel se cura
 personagem.curar(2)
-
 
 console.log("\n--- FIM DA BATALHA ---")
     if (personagem.getVida() > 0) {
