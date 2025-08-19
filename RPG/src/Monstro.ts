@@ -10,7 +10,6 @@ export class Monstro{
         this.vida = vida
         this.forca = forca
     }
-
     dano(personagem:Personagem):void{
         this.vida -= personagem.getForca()
         console.log(`${this.nome} foi atingido pelo personagem, ele atacou com ${personagem.getForca()} de força, ${this.nome} tem agora ${this.vida} de vida`)
@@ -40,5 +39,3 @@ export class Monstro{
         this.vida = vida
     }
 }
-
-

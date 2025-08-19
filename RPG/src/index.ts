@@ -18,14 +18,14 @@ console.log("")
 // Amabel se cura
 personagem.curar(2)
 
-console.log("\n--- FIM DA BATALHA ---")
+console.log("--- FIM DA BATALHA ---")
     if (personagem.getVida() > 0) {
-        console.log(`Parabéns! Você derrotou ${monstro.getNome()} e pode finalmente seguir para casa. `)
+    console.log(`Parabéns! Você derrotou ${monstro.getNome()} e pode finalmente seguir para casa. `)
         console.log(`Sua vida restante: ${personagem.getVida()}`)
     } else {
-        console.log("A criatura foi forte demais... Você foi derrotado. ")
+        console.log("A criatura foi forte demais... Você foi derrotado.")
         console.log(`Vida restante do monstro: ${monstro.getVida()}`)
     }
 }
 
-batalha(personagem , monstro)
+batalha(personagem, monstro)

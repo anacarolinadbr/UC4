@@ -6,7 +6,6 @@ console.log("2 - Curar");
 console.log("3 - Fugir");
 
 const opcao = readline.question("=== ESCOLHA OPÇÃO ===  ");
-
 switch (opcao) {
   case "1":
     console.log("você está atacando.");
