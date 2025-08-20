@@ -1,6 +1,6 @@
  export class Animal {
-    name: string
-    weight: number
+    protected name: string
+    protected weight: number
   
     constructor(name: string, weight: number) {
       this.name = name
