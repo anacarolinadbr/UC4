@@ -1,5 +1,6 @@
 import { Carro } from "./Carro";
 import { contaBancaria } from "./ContaBancaria";
+import { ContaPoupanca } from "./ContaPoupanca";
 import { Guerreiro } from "./Guerreiro";
 
 
@@ -12,9 +13,8 @@ heroi.treinar()
 const carro = new Carro(100)
 carro.acelerar(50)
 
-const minhaConta = new contaBancaria(1000)
-
-minhaConta.atualizarSaldo(100)  
+const minhaConta:ContaPoupanca = new ContaPoupanca(1000)
+minhaConta.aplicarJuros(20)  
       
 
 

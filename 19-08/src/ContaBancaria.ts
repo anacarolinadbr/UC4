@@ -5,7 +5,7 @@ export class contaBancaria {
         this.saldo = saldo
     }
 
-    atualizarSaldo(valor:number): void {
+    protected atualizarSaldo(valor:number): void {
         this.saldo += valor
         console.log(`Seu saldo atual é de ${this.saldo}`)
     }

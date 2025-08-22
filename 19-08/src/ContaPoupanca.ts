@@ -7,7 +7,7 @@ export class ContaPoupanca extends contaBancaria {
     }
 
     aplicarJuros(valor: number): void {
-        const juros = this.saldo * valor
+        const juros = this.saldo * 0.05
         this.atualizarSaldo(juros)
         console.log(`Seu saldo é de ${this.saldo}`)
     }
