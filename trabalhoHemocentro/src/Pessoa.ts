@@ -5,7 +5,6 @@ export class Pessoa {
     protected peso: number
     //Protected - só pode acessar nesta classe ou nas classes filhas 
     
-
     //Constructor para criar uma nova pessoa e vai receber os três valores 
     constructor(nome:string, idade:number, peso:number){
         this.nome = nome
@@ -29,4 +28,19 @@ export class Pessoa {
         this.nome = novoNome 
     }
 
+    getIdade():number{
+        return this.idade
+    }
+     
+    setIdade(novaIdade:number): void{
+        this.idade = novaIdade 
+    }
+
+    getPeso():number{
+        return this.peso
+    }
+     
+    setPeso(novoPeso:number): void{
+        this.peso = novoPeso 
+    }
 }
