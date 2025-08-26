@@ -1,10 +1,11 @@
+import { Doador } from "./Doador";
 import { SistemaHemocentro } from "./SistemaHemocentro";
 import * as readline from 'readline-sync';
 
 const hemocentro =  new SistemaHemocentro()
 
 
-
+/*
 //Cria uma variavel "opção" para ininicar ela uma string vazia 
 let opcao = ''
 
@@ -47,5 +48,8 @@ console.log ("5-  Sair")
 
 //const sistema = new SistemaHemocentro(); // cria o sistema
 
-sistema.cadastrarDoador();
+*/
+
+//hemocentro.buscarPorTipoSanguineo()
+hemocentro.cadastrarDoador()
 

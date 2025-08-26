@@ -12,7 +12,6 @@ export class Doador extends Pessoa {
 
     }
 
-    
     getTipoSanguineo():string{
         return this.tipoSanguineo
     }
