@@ -40,11 +40,10 @@ export class SistemaHemocentro {
     buscarPorTipoSanguineo(): void {
         const tipo = readline.question("Digite o tipo sanguíneo desejado: ")
         
-        //o this é a lista dos cadastrados e o filter vai criar um novo array como os elementos que passarem na consição que esta dentro do parenteses
-        //doador => é o parametro da função que depois vai ser chamado o metodo da classe doador para obter o tipo sanguineo dos doadores
-        //toUppperCase tranforma as letras em maisuculas
+        //o this é a lista dos cadastrados e o filter vai criar um novo array como os elementos que passarem ()
+        //doador => é o parametro da função, que depois vai ser chamado o metodo da classe doador para obter o tipo sanguineo dos doadores
         // === tipo vai comparar o tipo sanguineo do doador 
-        const encontrados = this.doadores.filter(doador => doador.getTipoSanguineo().toUpperCase() === tipo)
+        const encontrados = this.doadores.filter(doador => doador.getTipoSanguineo() === tipo)
 
         console.log("------------------")
         console.log("RESULTADO DA BUSCA")
@@ -52,9 +51,49 @@ export class SistemaHemocentro {
     
     // 
     if (encontrados.length === 0) {
-        console.log("Nenhu doador encontrador com esse tipo")
+        console.log("Nenhum doador encontrador com esse tipo")
         return
     }
+
+    console.log('NOME        |  IDADE  |  PESO  |  TIPO SANGUINEO  |  ÚLTIMA DOAÇÃO DE SANGUE')
+    console.log('-------------------------------------------------------------------------------')
+
+    //Usamos o for of para percorrer todos os doadroeres
+    for (const doador of encontrados) {  
+        console.log(
+            doador.getNome() + " | " +
+            doador.getIdade() + " | " +
+            doador.getPeso() + " | " +
+            doador.getTipoSanguineo() + " | " +
+            doador.getDataUltimaDoacao() + " | "
+        )
+        
+    }
+    }
+
+    buscarPorDataUltimaDoacao(): void {
+        const dataDesejada = readline.question("Digite a data desejada (dd/mm/aaaa): ")
+        //Split vai dividir as strings pelo separador / e o map(Number) vai converter cada item para um número
+        const [dia, mes, ano] = dataDesejada.split("/").map(Number)
+
+        //Vai criar um objeto Date a partir dos números
+        const dataDesejadaNova = new Date(ano, mes, dia)
+
+        const encontrados = this.doadores.filter(doador => {
+        //Pega a data da ultima doação feita pelo doador
+        const [diaC, mesC, anoC] = doador.getDataUltimaDoacao().split("/").map(Number)
+        //Criando objeto
+        const doacaoRegistrada = new Date(anoC, mesC, diaC)
+        
+        return doacaoRegistrada < dataDesejadaNova
+        //    25/08/25       menor    26/08/25    true
+        //Ele vai retonar quando a data for menor que a novaDataDesejada
+        })
+
+        console.log("----------------------")
+        console.log("RESULTADO DA BUSCA: ")
+        console.log("----------------------")
+
 
     console.log('NOME        |  IDADE  |  PESO  |  TIPO SANGUINEO  |  ÚLTIMA DOAÇÃO DE SANGUE')
     console.log('-------------------------------------------------------------------------------')
@@ -67,9 +106,7 @@ export class SistemaHemocentro {
             doador.getTipoSanguineo() + " | " +
             doador.getDataUltimaDoacao() + " | "
         )
-        console.log(encontrados)
     }
     }
-
-
+  
 }

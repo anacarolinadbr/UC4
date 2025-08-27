@@ -15,7 +15,7 @@ export class Pessoa {
     //Método vai retorar uma string com as informações da pessoa
     mostrarInfo():string {
         return `Nome: ${this.nome}, Idade: ${this.idade}, Peso: ${this.peso}`
-
+        
     }
 
     //Método getNome é para "pegar" o valor do atributo nome
